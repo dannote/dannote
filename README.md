@@ -14,6 +14,8 @@ Favourite languages: **Elixir** and **Ruby**.
 
 **[lua-template](https://github.com/dannote/lua-template)** — Minimal Lua templating engine. Adopted by [Cloudflare](https://github.com/cloudflare/loom/blob/master/jit/loom.lua).
 
+**[pi-elixir](https://github.com/dannote/pi-elixir)** — BEAM runtime tools for [pi](https://github.com/badlogic/pi-mono). Connects to the running Elixir app for live introspection — eval, docs, process state, Ecto queries.
+
 ### Ruby
 
 **[typespec_from_serializers](https://github.com/dannote/typespec_from_serializers)** — Generate TypeSpec descriptions from your JSON serializers. [RubyGems](https://rubygems.org/gems/typespec_from_serializers)
@@ -27,6 +29,8 @@ Favourite languages: **Elixir** and **Ruby**.
 **[phoenix_iconify](https://github.com/dannote/phoenix_iconify)** — Phoenix components for Iconify icons with compile-time discovery. [Hex](https://hex.pm/packages/phoenix_iconify)
 
 **[iconify](https://github.com/dannote/iconify)** — Elixir library for working with Iconify icons. [Hex](https://hex.pm/packages/iconify)
+
+**[ex_ast](https://github.com/dannote/ex_ast)** — Search and replace Elixir code by AST pattern. No regex, no custom DSL — patterns are plain Elixir. [Hex](https://hex.pm/packages/ex_ast)
 
 **[ex_dna](https://github.com/dannote/ex_dna)** — Code duplication detector powered by Elixir AST analysis. [Hex](https://hex.pm/packages/ex_dna)
 
