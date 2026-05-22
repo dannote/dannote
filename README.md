@@ -1,97 +1,76 @@
-Full-stack developer and designer. Assembler to Elixir — whatever the problem needs.
+I build tools for agents that work with code, design, and running systems.
 
-Favourite languages: **Elixir** and **Ruby**.
+Agents can generate changes quickly, but they still need good feedback to verify the result. My work exposes structure around software artifacts — design trees, visual diffs, code ASTs, runtime state, build graphs, checks, replay, and feedback loops — so agents can inspect, modify, and correct their work more reliably.
 
-### Featured
+## Current work
 
-**[OpenPencil](https://github.com/open-pencil/open-pencil)** — AI-native design editor. Open-source Figma alternative built on Skia/WebGPU. [Website](https://openpencil.dev)
+### Design tooling
 
-**[figma-use](https://github.com/dannote/figma-use)** — CLI that lets AI agents design in Figma. 100+ commands, JSX rendering, full read/write access. [Show HN](https://news.ycombinator.com/item?id=46665169) · [npm](https://www.npmjs.com/package/figma-use)
+**[OpenPencil](https://github.com/open-pencil/open-pencil)** — AI-native design editor and open-source Figma alternative built on Skia/WebGL. [Website](https://openpencil.dev)
 
-**[QuickBEAM](https://github.com/elixir-volt/quickbeam)** — JavaScript runtime for the BEAM — Web APIs backed by OTP, native DOM, and a built-in TypeScript toolchain. [Show HN](https://news.ycombinator.com/item?id=47558094)
+**[figma-use](https://github.com/dannote/figma-use)** — Agent-facing Figma CLI with JSX rendering, structural queries, diffs, linting, analysis, patch workflows, export, and round-tripping. [Show HN](https://news.ycombinator.com/item?id=46665169) · [npm](https://www.npmjs.com/package/figma-use)
 
-**[pi-elixir](https://github.com/dannote/pi-elixir)** — BEAM runtime tools for [pi](https://github.com/badlogic/pi-mono). Connects to the running Elixir app for live introspection — eval, docs, process state, Ecto queries.
+### Coding agents and code intelligence
 
-**[live_render](https://github.com/dannote/live_render)** — Server-driven generative UI for Phoenix LiveView.
+**[Elixir Vibe](https://github.com/elixir-vibe)** — Elixir-native tooling for agent-assisted coding: AST-aware edits, duplicate detection, generated-code checks, program-dependence graphs, structural code search, and a BEAM-native agent runtime.
 
-**[phoenix_replay](https://github.com/dannote/phoenix_replay)** — Session recording and replay for Phoenix LiveView.
+Projects:
 
-**[ex_dna](https://github.com/dannote/ex_dna)** — Code duplication detector powered by Elixir AST analysis. [Hex](https://hex.pm/packages/ex_dna)
+- **[Vibe](https://github.com/elixir-vibe/vibe)** — experimental BEAM-native coding agent runtime with TUI, web UI, eval, memory, tools, and subagents.
+- **[Reach](https://github.com/elixir-vibe/reach)** — program dependence graph, call/data-flow, architecture checks, and effect analysis for BEAM projects.
+- **[Exograph](https://github.com/elixir-vibe/exograph)** — structural Elixir code search powered by ExAST, Reach, Ecto, and Postgres/ParadeDB.
+- **[ex_ast](https://github.com/elixir-vibe/ex_ast)** — AST-aware search, replace, and diffs for Elixir code. [Hex](https://hex.pm/packages/ex_ast)
+- **[ex_dna](https://github.com/elixir-vibe/ex_dna)** — AST-aware duplicate-code detection with extraction candidates. [Hex](https://hex.pm/packages/ex_dna)
+- **[ex_slop](https://github.com/elixir-vibe/ex_slop)** — Credo checks for low-quality AI-generated Elixir patterns.
+- **[program_facts](https://github.com/elixir-vibe/program_facts)** — generated Elixir programs with known structural facts for analyzer testing.
 
-### Elixir Libraries
+### Frontend runtime and build tooling
 
-**[phoenix_streamdown](https://github.com/dannote/phoenix_streamdown)** — Streaming markdown renderer for Phoenix LiveView, optimized for LLM output. [Hex](https://hex.pm/packages/phoenix_streamdown)
+**[Elixir Volt](https://github.com/elixir-volt)** — frontend tooling for Phoenix that runs inside the BEAM: JS/TS/Vue/Tailwind builds, HMR, npm package resolution, QuickJS runtimes, Vue-to-LiveView rendering, and OXC/Vize/Oxide bindings.
 
-**[phoenix_spec](https://github.com/dannote/phoenix_spec)** — Generate OpenAPI 3.1 specs from Phoenix JSON views and Ecto schemas.
+Projects:
 
-**[ex_ast](https://github.com/dannote/ex_ast)** — Search and replace Elixir code by AST pattern. [Hex](https://hex.pm/packages/ex_ast)
+- **[Volt](https://github.com/elixir-volt/volt)** — Elixir-native frontend build tool: dev server, HMR, Tailwind CSS, JS/TS, Vue/Svelte/React/Solid, and production builds.
+- **[QuickBEAM](https://github.com/elixir-volt/quickbeam)** — JavaScript runtime for the BEAM with Web APIs backed by OTP. [Show HN](https://news.ycombinator.com/item?id=47558094)
+- **[Phoenix Vapor](https://github.com/elixir-volt/phoenix_vapor)** — Vue templates compiled to native `%Phoenix.LiveView.Rendered{}` structs.
+- **[oxc](https://github.com/elixir-volt/oxc_ex)**, **[vize](https://github.com/elixir-volt/vize_ex)**, **[oxide_ex](https://github.com/elixir-volt/oxide_ex)** — Elixir bindings for JS, Vue, and Tailwind toolchains.
 
-**[ex_slop](https://github.com/dannote/ex_slop)** — Credo checks that catch AI-generated code slop in Elixir.
+## Runtime feedback
 
-**[qqr](https://github.com/dannote/qqr)** — QR code encoder and decoder in pure Elixir.
+- **[pi-elixir](https://github.com/dannote/pi-elixir)** — BEAM runtime tools for [pi](https://github.com/badlogic/pi-mono): eval, docs, process state, Ecto queries, logs, and supervisor trees.
+- **[phoenix_replay](https://github.com/dannote/phoenix_replay)** — session recording and replay for Phoenix LiveView.
+- **[live_render](https://github.com/dannote/live_render)** — server-driven generative UI for Phoenix LiveView.
+- **[phoenix_streamdown](https://github.com/dannote/phoenix_streamdown)** — streaming markdown renderer for Phoenix LiveView, optimized for LLM output. [Hex](https://hex.pm/packages/phoenix_streamdown)
 
-**[json_spec](https://github.com/dannote/json_spec)** — Elixir typespec syntax → JSON Schema, at compile time. [Hex](https://hex.pm/packages/json_spec)
+## Agent workflow tools
 
-**[phoenix_iconify](https://github.com/dannote/phoenix_iconify)** — Phoenix components for Iconify icons with compile-time discovery. [Hex](https://hex.pm/packages/phoenix_iconify)
+- **[dot-pi](https://github.com/dannote/dot-pi)** — extensions, skills, and rules for Pi coding agent.
+- **[sloplint](https://github.com/dannote/sloplint)** — AST-based multilingual AI slop linter.
+- **[agentfmt](https://github.com/dannote/agentfmt)** — token-efficient CLI output formatting for LLM agents.
 
-**[iconify](https://github.com/dannote/iconify)** — Elixir library for working with Iconify icons. [Hex](https://hex.pm/packages/iconify)
+## Elixir libraries
 
-### Elixir Volt ecosystem
+- **[phoenix_spec](https://github.com/dannote/phoenix_spec)** — OpenAPI 3.1 specs from Phoenix JSON views and Ecto schemas.
+- **[json_spec](https://github.com/dannote/json_spec)** — Elixir typespec syntax → JSON Schema, at compile time. [Hex](https://hex.pm/packages/json_spec)
+- **[phoenix_iconify](https://github.com/elixir-volt/phoenix_iconify)** / **[iconify](https://github.com/elixir-volt/iconify)** — Iconify SVGs for Elixir, Phoenix, and LiveView. [Hex](https://hex.pm/packages/phoenix_iconify)
+- **[qqr](https://github.com/dannote/qqr)** — QR code encoder and decoder in pure Elixir.
 
-**[Volt](https://github.com/elixir-volt/volt)** — Elixir-native frontend build tool — dev server, HMR, and production builds for JavaScript, TypeScript, Vue SFCs, and CSS. No Node.js required.
+## Ruby libraries
 
-**[npm_ex](https://github.com/elixir-volt/npm_ex)** — npm package manager for Elixir.
+- **[typespec_from_serializers](https://github.com/dannote/typespec_from_serializers)** — TypeSpec descriptions from JSON serializers. [RubyGems](https://rubygems.org/gems/typespec_from_serializers)
+- **[arel_maniac](https://github.com/dannote/arel_maniac)** — PostgreSQL features for ActiveRecord without raw SQL.
 
-**[oxc_ex](https://github.com/elixir-volt/oxc_ex)** — Elixir bindings for the OXC JavaScript toolchain.
+## Search and NLP
 
-**[vize_ex](https://github.com/elixir-volt/vize_ex)** — Elixir bindings for the Vize Vue toolchain.
+- **[Abiko Search](https://github.com/abiko-search)** — search engine for Tor hidden services, built from scratch in Elixir; included an Onion v3 implementation and tor2web proxy. [Product Hunt](https://www.producthunt.com/products/abiko) · [Hacker News](https://news.ycombinator.com/item?id=14927685)
+- **[Natasha-Ex](https://github.com/natasha-ex)** — Elixir ports of Russian NLP tools: yargy, slovnet, morph_ru, razmetka, razdel.
 
-**[npm_semver](https://github.com/elixir-volt/npm_semver)** — npm-compatible semantic versioning for Elixir.
+## C, Lua, and Linux infrastructure
 
-**[oxide_ex](https://github.com/elixir-volt/oxide_ex)** — Elixir NIF bindings for Tailwind CSS Oxide.
+- **[socks-nginx-module](https://github.com/dannote/socks-nginx-module)** — SOCKS5 proxy support for nginx; referenced on the nginx wiki.
+- **[lua-template](https://github.com/dannote/lua-template)** — minimal Lua templating engine adopted by Cloudflare Loom.
+- [Xfce garcon desktop actions support](https://gitlab.xfce.org/xfce/garcon/-/commit/aec77533132eb324180ef771e15226a752573eae) — patch to the core Xfce menu library; ships in Xfce since 0.6.0.
 
-### AI Agent Tooling
+## Security research
 
-**[dot-pi](https://github.com/dannote/dot-pi)** — Extensions, skills, and rules for Pi coding agent.
-
-**[sloplint](https://github.com/dannote/sloplint)** — AST-based multilingual AI slop linter.
-
-**[agentfmt](https://github.com/dannote/agentfmt)** — Token-efficient CLI output formatting for LLM agents.
-
-### Ruby
-
-**[typespec_from_serializers](https://github.com/dannote/typespec_from_serializers)** — Generate TypeSpec descriptions from your JSON serializers. [RubyGems](https://rubygems.org/gems/typespec_from_serializers)
-
-**[arel_maniac](https://github.com/dannote/arel_maniac)** — The missing PostgreSQL features for ActiveRecord — no raw SQL allowed.
-
-### Natasha-Ex
-
-Elixir ports of the [Natasha](https://github.com/natasha) Russian NLP toolkit. All on [Hex](https://hex.pm).
-
-**[yargy](https://github.com/natasha-ex/yargy)** — Earley parser with grammar DSL for information extraction.
-
-**[slovnet](https://github.com/natasha-ex/slovnet)** — Named entity recognition with CNN+CRF.
-
-**[morph_ru](https://github.com/natasha-ex/morph_ru)** — Morphological analyzer based on OpenCorpora.
-
-**[razmetka](https://github.com/natasha-ex/razmetka)** — Priority-dispatch sentence classifier with pluggable ML fallback.
-
-**[razdel](https://github.com/natasha-ex/razdel)** — Rule-based sentence and word tokenization.
-
-### Abiko Search
-
-A [search engine for Tor hidden services](https://github.com/abiko-search) (defunct). Built from scratch in Elixir — [Tor protocol reimplemented from scratch](https://github.com/abiko-search/garlic), [tor2web](https://github.com/abiko-search/tor2web) proxy. Featured on Product Hunt and Hacker News.
-
-### Systems
-
-**[socks-nginx-module](https://github.com/dannote/socks-nginx-module)** — SOCKS5 proxy support for nginx. Referenced on the [nginx wiki](https://www.nginx.com/resources/wiki/modules/).
-
-**[lua-template](https://github.com/dannote/lua-template)** — Minimal Lua templating engine. Adopted by [Cloudflare](https://github.com/cloudflare/loom/blob/master/jit/loom.lua).
-
-### Xfce
-
-[Desktop actions support](https://gitlab.xfce.org/xfce/garcon/-/commit/aec77533132eb324180ef771e15226a752573eae) in garcon — the core Xfce menu library. Ships on every Xfce installation since 0.6.0.
-
-### Security Research
-
-[Google Bug Hunters](https://bughunters.google.com/profile/62602ae8-cf92-4fb0-810c-c9e284f3427e) · [Bugcrowd](https://bugcrowd.com/h/dannote) — [CodePen Hall of Fame](https://bugcrowd.com/engagements/codepen)
+[Google Bug Hunters](https://bughunters.google.com/profile/62602ae8-cf92-4fb0-810c-c9e284f3427e) · [Bugcrowd](https://bugcrowd.com/h/dannote) · [CodePen Hall of Fame](https://bugcrowd.com/engagements/codepen)
