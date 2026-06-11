@@ -2,6 +2,12 @@ I build tools for agents that work with code, design, and running systems.
 
 Agents can generate changes quickly, but they still need good feedback to verify the result. My work exposes structure around software artifacts — design trees, visual diffs, code ASTs, runtime state, build graphs, checks, replay, and feedback loops — so agents can inspect, modify, and correct their work more reliably.
 
+It is one project, not many: a web stack where AI-generated software can be
+*checked* — every failure carrying its location and cause, every session
+replayable, every dependency traceable. The thesis, the architecture, the
+roadmap, and the honest uncertainties are maintained as a living standard:
+**[Building Blocks for the Future Web](https://github.com/elixir-vibe/building-blocks)**.
+
 ## Current work
 
 ### Design tooling
