@@ -17,29 +17,30 @@ That has led me to work across design tools, code intelligence, runtimes, build 
 Under **[Elixir Vibe](https://github.com/elixir-vibe)**, I’m building Elixir-native tools that let coding agents work with the structure and runtime of a real codebase instead of treating source files as plain text.
 
 - **[Vibe](https://github.com/elixir-vibe/vibe)** — an experimental BEAM-native coding agent runtime with a TUI, web UI, eval, memory, tools, and subagents.
-- **[Reach](https://github.com/elixir-vibe/reach)** — program-dependence graphs, call and data flow, effect analysis, and architecture checks for BEAM projects.
-- **[Exograph](https://github.com/elixir-vibe/exograph)** — structural Elixir code search built with ExAST, Reach, Ecto, and Postgres/ParadeDB.
+- **[Reach](https://github.com/elixir-vibe/reach)** — program-dependence graphs, call and data flow, effect analysis, and architecture checks for BEAM projects. [Hex](https://hex.pm/packages/reach)
+- **[Exograph](https://github.com/elixir-vibe/exograph)** — structural Elixir code search built with ExAST, Reach, Ecto, and Postgres/ParadeDB. [Hex](https://hex.pm/packages/exograph)
 - **[ex_ast](https://github.com/elixir-vibe/ex_ast)** — AST-aware search, replacement, and structural diffs for Elixir. [Hex](https://hex.pm/packages/ex_ast)
 - **[ex_dna](https://github.com/elixir-vibe/ex_dna)** — AST-aware duplicate-code detection with extraction candidates. [Hex](https://hex.pm/packages/ex_dna)
-- **[ex_slop](https://github.com/elixir-vibe/ex_slop)** — Credo checks for recurring low-quality patterns in generated Elixir code.
-- **[program_facts](https://github.com/elixir-vibe/program_facts)** — generated programs with known structural facts for testing static analyzers.
+- **[ex_slop](https://github.com/elixir-vibe/ex_slop)** — Credo checks for recurring low-quality patterns in generated Elixir code. [Hex](https://hex.pm/packages/ex_slop)
+- **[program_facts](https://github.com/elixir-vibe/program_facts)** — generated programs with known structural facts for testing static analyzers. [Hex](https://hex.pm/packages/program_facts)
 
 ### Frontend tooling inside the BEAM
 
 **[Elixir Volt](https://github.com/elixir-volt)** explores what Phoenix frontend development looks like when more of the toolchain runs inside the BEAM.
 
-- **[Volt](https://github.com/elixir-volt/volt)** — a frontend build tool and dev server for Phoenix with HMR, Tailwind CSS, and support for JavaScript, TypeScript, Vue, Svelte, React, and Solid.
-- **[QuickBEAM](https://github.com/elixir-volt/quickbeam)** — a JavaScript runtime for the BEAM with browser-like APIs backed by OTP. [Show HN](https://news.ycombinator.com/item?id=47558094)
-- **[Phoenix Vapor](https://github.com/elixir-volt/phoenix_vapor)** — Vue templates compiled into native `%Phoenix.LiveView.Rendered{}` structures.
-- **[OXC](https://github.com/elixir-volt/oxc_ex)**, **[Vize](https://github.com/elixir-volt/vize_ex)**, and **[Oxide](https://github.com/elixir-volt/oxide_ex)** — Elixir bindings for JavaScript, Vue, and Tailwind toolchains.
+- **[Volt](https://github.com/elixir-volt/volt)** — a frontend build tool and dev server for Phoenix with HMR, Tailwind CSS, and support for JavaScript, TypeScript, Vue, Svelte, React, and Solid. [Hex](https://hex.pm/packages/volt)
+- **[Astral](https://github.com/elixir-volt/astral)** — a Volt-powered static site generator for Elixir applications. [Hex](https://hex.pm/packages/astral)
+- **[QuickBEAM](https://github.com/elixir-volt/quickbeam)** — a JavaScript runtime for the BEAM with browser-like APIs backed by OTP. [Hex](https://hex.pm/packages/quickbeam) · [Show HN](https://news.ycombinator.com/item?id=47558094)
+- **[Phoenix Vapor](https://github.com/elixir-volt/phoenix_vapor)** — Vue templates compiled into native `%Phoenix.LiveView.Rendered{}` structures. [Hex](https://hex.pm/packages/phoenix_vapor)
+- **[OXC](https://github.com/elixir-volt/oxc_ex)**, **[Vize](https://github.com/elixir-volt/vize_ex)**, and **[Oxide](https://github.com/elixir-volt/oxide_ex)** — Elixir bindings for JavaScript, Vue, and Tailwind toolchains. [Oxide on Hex](https://hex.pm/packages/oxide_ex)
 
 ### Making running systems observable
 
 Static code is only part of the picture. I also work on ways for agents and developers to inspect software while it is running:
 
 - **[pi-elixir](https://github.com/dannote/pi-elixir)** — BEAM runtime tools for the [Pi coding agent](https://github.com/badlogic/pi-mono), including eval, documentation lookup, process state, Ecto queries, logs, and supervisor trees.
-- **[phoenix_replay](https://github.com/dannote/phoenix_replay)** — recording and replay for Phoenix LiveView sessions.
-- **[live_render](https://github.com/dannote/live_render)** — server-driven generative UI for Phoenix LiveView.
+- **[phoenix_replay](https://github.com/dannote/phoenix_replay)** — recording and replay for Phoenix LiveView sessions. [Hex](https://hex.pm/packages/phoenix_replay)
+- **[live_render](https://github.com/dannote/live_render)** — server-driven generative UI for Phoenix LiveView. [Hex](https://hex.pm/packages/live_render)
 - **[phoenix_streamdown](https://github.com/dannote/phoenix_streamdown)** — streaming Markdown for LiveView, designed for incremental LLM output. [Hex](https://hex.pm/packages/phoenix_streamdown)
 
 The larger thesis, architecture, roadmap, and open questions are documented in **[Building Blocks for the Future Web](https://github.com/elixir-vibe/building-blocks)**. It describes how these pieces might fit into a web stack where generated software can be inspected, replayed, traced, and checked.
@@ -56,10 +57,10 @@ My current work is mostly around agents and Elixir, but I’ve built open-source
 
 ### Phoenix and Elixir libraries
 
-- **[phoenix_spec](https://github.com/dannote/phoenix_spec)** — OpenAPI 3.1 specifications generated from Phoenix JSON views and Ecto schemas.
+- **[phoenix_spec](https://github.com/dannote/phoenix_spec)** — OpenAPI 3.1 specifications generated from Phoenix JSON views and Ecto schemas. [Hex](https://hex.pm/packages/phoenix_spec)
 - **[json_spec](https://github.com/dannote/json_spec)** — Elixir typespec syntax turned into JSON Schema at compile time. [Hex](https://hex.pm/packages/json_spec)
-- **[phoenix_iconify](https://github.com/elixir-volt/phoenix_iconify)** and **[iconify](https://github.com/elixir-volt/iconify)** — Iconify SVGs for Elixir, Phoenix, and LiveView. [Hex](https://hex.pm/packages/phoenix_iconify)
-- **[qqr](https://github.com/dannote/qqr)** — a pure-Elixir QR code encoder and decoder.
+- **[phoenix_iconify](https://github.com/elixir-volt/phoenix_iconify)** and **[iconify](https://github.com/elixir-volt/iconify)** — Iconify SVGs for Elixir, Phoenix, and LiveView. [phoenix_iconify on Hex](https://hex.pm/packages/phoenix_iconify) · [iconify on Hex](https://hex.pm/packages/iconify)
+- **[qqr](https://github.com/dannote/qqr)** — a pure-Elixir QR code encoder and decoder. [Hex](https://hex.pm/packages/qqr)
 
 ### Ruby
 
