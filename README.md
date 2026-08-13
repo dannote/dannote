@@ -32,7 +32,8 @@ Under **[Elixir Vibe](https://github.com/elixir-vibe)**, I’m building Elixir-n
 - **[Astral](https://github.com/elixir-volt/astral)** — a Volt-powered static site generator for Elixir applications. [Hex](https://hex.pm/packages/astral)
 - **[QuickBEAM](https://github.com/elixir-volt/quickbeam)** — a JavaScript runtime for the BEAM with browser-like APIs backed by OTP. [Hex](https://hex.pm/packages/quickbeam) · [Show HN](https://news.ycombinator.com/item?id=47558094)
 - **[Phoenix Vapor](https://github.com/elixir-volt/phoenix_vapor)** — Vue templates compiled into native `%Phoenix.LiveView.Rendered{}` structures. [Hex](https://hex.pm/packages/phoenix_vapor)
-- **[OXC](https://github.com/elixir-volt/oxc_ex)**, **[Vize](https://github.com/elixir-volt/vize_ex)**, and **[Oxide](https://github.com/elixir-volt/oxide_ex)** — Elixir bindings for JavaScript, Vue, and Tailwind toolchains. [Oxide on Hex](https://hex.pm/packages/oxide_ex)
+- **[OXC](https://github.com/elixir-volt/oxc_ex)** and **[Vize](https://github.com/elixir-volt/vize_ex)** — Elixir bindings for JavaScript and Vue toolchains.
+- **[Oxide](https://github.com/elixir-volt/oxide_ex)** — Elixir bindings for the Tailwind CSS toolchain. [Hex](https://hex.pm/packages/oxide_ex)
 
 ### Making running systems observable
 
