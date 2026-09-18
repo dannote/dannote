@@ -1,8 +1,8 @@
-I build open-source tools for coding agents, design automation, and the Elixir ecosystem.
+I build open-source tools for coding agents, design automation, native software, and the Elixir ecosystem.
 
 I’m interested in the part of AI-assisted development that comes after generation: how an agent inspects what it changed, understands a running system, finds the cause of a failure, and verifies that the result is actually correct.
 
-That has led me to work across design tools, code intelligence, runtimes, build systems, replay, and developer tooling. The projects below approach different parts of the same problem.
+That has led me to work across design tools, code intelligence, runtimes, native UI, build systems, deployment, replay, and developer tooling. The projects below approach different parts of the same problem.
 
 ## What I’m building now
 
@@ -12,9 +12,18 @@ That has led me to work across design tools, code intelligence, runtimes, build 
 
 **[figma-use](https://github.com/dannote/figma-use)** brings that workflow to Figma. It gives agents a CLI for structural queries, JSX rendering, diffs, linting, analysis, patch workflows, exports, and round-tripping. [Show HN](https://news.ycombinator.com/item?id=46665169) · [npm](https://www.npmjs.com/package/figma-use)
 
-### Code intelligence for Elixir
+### Native software from Elixir
 
-Under **[Elixir Vibe](https://github.com/elixir-vibe)**, I’m building Elixir-native tools that let coding agents work with the structure and runtime of a real codebase instead of treating source files as plain text.
+**[Elixir Crab](https://github.com/elixir-crab)** builds native applications that keep behavior, state, supervision, and public contracts in Elixir and use Rust only for bounded platform mechanics.
+
+- **[gpui](https://github.com/elixir-crab/gpui)** — declarative native desktop UI for Elixir/OTP: GPUI windows, HEEx-style views, native controls, deterministic test displays, and remote displays. [Hex](https://hex.pm/packages/gpui)
+- **[rustq](https://github.com/elixir-crab/rustq)** — typed Rust and Rustler code generation from Elixir, with quasiquoting and ASTs, so NIF boundaries need no handwritten Rust. [Hex](https://hex.pm/packages/rustq)
+
+### Elixir tools for agents and the BEAM
+
+Under **[Elixir Vibe](https://github.com/elixir-vibe)**, I’m building Elixir-native tools that let coding agents work with the structure and runtime of a real codebase instead of treating source files as plain text — and, increasingly, tools for running and shipping the systems they produce.
+
+Code intelligence:
 
 - **[Vibe](https://github.com/elixir-vibe/vibe)** — an experimental BEAM-native coding agent runtime with a TUI, web UI, eval, memory, tools, and subagents.
 - **[Reach](https://github.com/elixir-vibe/reach)** — program-dependence graphs, call and data flow, effect analysis, and architecture checks for BEAM projects. [Hex](https://hex.pm/packages/reach)
@@ -23,6 +32,20 @@ Under **[Elixir Vibe](https://github.com/elixir-vibe)**, I’m building Elixir-n
 - **[ex_dna](https://github.com/elixir-vibe/ex_dna)** — AST-aware duplicate-code detection with extraction candidates. [Hex](https://hex.pm/packages/ex_dna)
 - **[ex_slop](https://github.com/elixir-vibe/ex_slop)** — Credo checks for recurring low-quality patterns in generated Elixir code. [Hex](https://hex.pm/packages/ex_slop)
 - **[program_facts](https://github.com/elixir-vibe/program_facts)** — generated programs with known structural facts for testing static analyzers. [Hex](https://hex.pm/packages/program_facts)
+- **[pi-elixir](https://github.com/elixir-vibe/pi-elixir)** — BEAM runtime tools for the [Pi coding agent](https://github.com/badlogic/pi-mono): eval, documentation lookup, process state, Ecto queries, logs, and supervisor trees, connected to the running app via Tidewave.
+
+Running and shipping systems:
+
+- **[xamal](https://github.com/elixir-vibe/xamal)** — bare-metal deployment for Elixir releases over SSH, in the spirit of Kamal but with native releases and Caddy instead of Docker. [Hex](https://hex.pm/packages/xamal)
+- **[release_kit](https://github.com/elixir-vibe/release_kit)** — OTP release tarballs with deployment-neutral artifact manifests. [Hex](https://hex.pm/packages/release_kit)
+- **[host_kit](https://github.com/elixir-vibe/host_kit)** — host infrastructure declared, planned, and controlled from Elixir. [Hex](https://hex.pm/packages/host_kit)
+- **[gatehouse](https://github.com/elixir-vibe/gatehouse)** — OTP-native edge proxy and blue-green traffic switcher for Elixir deployments.
+- **[llm_proxy](https://github.com/elixir-vibe/llm_proxy)** — a self-hosted, Elixir-native alternative to LiteLLM: multi-provider routing, fallbacks, budgets, keys, and observability behind one API. [Hex](https://hex.pm/packages/llm_proxy)
+- **[quackdb](https://github.com/elixir-vibe/quackdb)** — remote DuckDB client for Elixir over the Quack protocol, on DBConnection with early Ecto support. [Hex](https://hex.pm/packages/quackdb)
+- **[incant](https://github.com/elixir-vibe/incant)** — Phoenix admin framework: resources, dashboards, datasets, actions, authorization, and service-owned remote admin surfaces. [Hex](https://hex.pm/packages/incant)
+- **[safe_rpc](https://github.com/elixir-vibe/safe_rpc)** — capability-scoped BEAM-native RPC over the Erlang external term format. [Hex](https://hex.pm/packages/safe_rpc)
+- **[phoenix_replay](https://github.com/elixir-vibe/phoenix_replay)** — recording and replay for Phoenix LiveView sessions. [Hex](https://hex.pm/packages/phoenix_replay)
+- **[ttycast](https://github.com/elixir-vibe/ttycast)** — seekable, compressed terminal recordings for BEAM applications. [Hex](https://hex.pm/packages/ttycast)
 
 ### Frontend tooling inside the BEAM
 
@@ -34,13 +57,11 @@ Under **[Elixir Vibe](https://github.com/elixir-vibe)**, I’m building Elixir-n
 - **[Phoenix Vapor](https://github.com/elixir-volt/phoenix_vapor)** — Vue templates compiled into native `%Phoenix.LiveView.Rendered{}` structures. [Hex](https://hex.pm/packages/phoenix_vapor)
 - **[OXC](https://github.com/elixir-volt/oxc_ex)** and **[Vize](https://github.com/elixir-volt/vize_ex)** — Elixir bindings for JavaScript and Vue toolchains.
 - **[Oxide](https://github.com/elixir-volt/oxide_ex)** — Elixir bindings for the Tailwind CSS toolchain. [Hex](https://hex.pm/packages/oxide_ex)
+- **[npm_ex](https://github.com/elixir-volt/npm_ex)** — an npm package manager for Elixir, so Volt projects resolve JavaScript dependencies without Node.js.
+- **[xm](https://github.com/elixir-volt/xm)** — an Elixir DSL for building XML documents. [Hex](https://hex.pm/packages/xm)
 
-### Making running systems observable
+### Generative UI for Phoenix
 
-Static code is only part of the picture. I also work on ways for agents and developers to inspect software while it is running:
-
-- **[pi-elixir](https://github.com/dannote/pi-elixir)** — BEAM runtime tools for the [Pi coding agent](https://github.com/badlogic/pi-mono), including eval, documentation lookup, process state, Ecto queries, logs, and supervisor trees.
-- **[phoenix_replay](https://github.com/dannote/phoenix_replay)** — recording and replay for Phoenix LiveView sessions. [Hex](https://hex.pm/packages/phoenix_replay)
 - **[live_render](https://github.com/dannote/live_render)** — server-driven generative UI for Phoenix LiveView. [Hex](https://hex.pm/packages/live_render)
 - **[phoenix_streamdown](https://github.com/dannote/phoenix_streamdown)** — streaming Markdown for LiveView, designed for incremental LLM output. [Hex](https://hex.pm/packages/phoenix_streamdown)
 
@@ -81,4 +102,4 @@ My current work is mostly around agents and Elixir, but I’ve built open-source
 
 ### Security research
 
-I’ve reported security issues through [Google Bug Hunters](https://bughunters.google.com/profile/62602ae8-cf92-4fb0-810c-c9e284f3427e), [Bugcrowd](https://bugcrowd.com/h/dannote), and the [CodePen bug bounty program](https://bugcrowd.com/engagements/codepen).
+I’ve reported security issues through [Google Bug Hunters](https://bughunters.google.com/profile/62602ae8-cf92-4fb0-810c-c9e284f3427e), [Bugcrowd](https://bugcrowd.com/h/dannote), and CodePen’s bug bounty program.
